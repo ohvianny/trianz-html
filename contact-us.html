@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Club Trianz</title>
+
+
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="./assets/vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/vendor/owl.carousel/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/theme-elements.css">
+
+    <link rel="stylesheet" href="./assets/css/skins/default.css">
+</head>
+
+<body>
+
+    <div class="body">
+        <header id="header" class="header-effect-shrink"
+            data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+            <div class="header-body">
+                <div class="header-container container">
+                    <div class="header-row">
+                        <div class="header-column">
+                            <div class="header-row">
+                                <div class="header-logo">
+                                    <a href="index.html">
+                                        <img alt="Porto" width="200" height="48" data-sticky-width="150"
+                                            data-sticky-height="40" src="./assets/img/tri.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-column justify-content-end">
+                            <div class="header-row">
+                                <div class="header-nav header-nav-links order-2 order-lg-1">
+                                    <div
+                                        class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
+                                        <nav class="collapse">
+                                            <ul class="nav nav-pills" id="mainNav">
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="index.html">
+                                                        Inicio
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="about-us.html">
+                                                        Nosotros
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="portafolio.html">
+                                                        Portafolio
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle active"
+                                                        href="contact-us.html">
+                                                        Contáctanos
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <button class="btn header-btn-collapse-nav" data-toggle="collapse"
+                                        data-target=".header-nav-main nav">
+                                        <i class="icon-menu icons"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </header>
+
+
+        <div role="main" class="main">
+
+            <section class="page-header page-header-classic page-header-sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+                            <h1 data-title-border>Contáctanos</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container py-4">
+
+                <div class="row mb-5">
+                    <div class="col">
+                        <form id="contactForm" class="contact-form-recaptcha-v3">
+                            <div class="form-row">
+                                <div class="form-group col-lg-6">
+                                    <label class="required font-weight-bold text-dark text-2">Nombre completo</label>
+                                    <input type="text" maxlength="100" class="form-control" name="name" id="name"
+                                        [(ngModel)]="email.name">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label class="required font-weight-bold text-dark text-2">Correo electrónico</label>
+                                    <input type="email" maxlength="50" class="form-control" name="email" id="email"
+                                        [(ngModel)]="email.email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label class="required font-weight-bold text-dark text-2">Título</label>
+                                    <input type="text" maxlength="100" class="form-control" name="subject" id="subject"
+                                        [(ngModel)]="email.subject">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label class="required font-weight-bold text-dark text-2">Mensaje</label>
+                                    <textarea maxlength="5000" rows="5" class="form-control" name="message" id="message"
+                                        [(ngModel)]="email.message"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <input type="submit" value="Enviar mensaje" class="btn btn-primary btn-modern"
+                                        (click)="onSaveForm()">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-ribbon">
+                    <span>Contáctanos</span>
+                </div>
+                <div class="row py-5 my-4">
+                    <div class="col-md-8 col-lg-5 mb-5 mb-lg-0">
+                        <h5 class="text-3 mb-3">Sobre nosotros</h5>
+                        <p>Somos una fundación deportiva sin fines de lucro, creada para fomentar y organizar
+                            eventos de
+                            triatlón en Venezuela.
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-lg-4 mb-4 mb-md-0">
+                        <div class="contact-details">
+                            <h5 class="text-3 mb-3 pb-1">Contáctanos</h5>
+                            <p class="text-8 text-color-light font-weight-bold">(0414) 7808165</p>
+                            <p class="mb-2">Coordinadoción: (0414) 1223600</p>
+                            <ul class="list">
+                                <li class="mb-1">
+                                    <p class="m-0">Playa Lido y Cerro el Morro (Lechería) y Autopista
+                                        Barcelona-Píritu</p>
+                                </li>
+                                <li class="mb-1">
+                                    <p class="m-0"><a href="mailto:club.trianz@gmail.com">club.trianz@gmail.com</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <h5 class="text-3 mb-3">Siguenos</h5>
+                        <ul class="social-icons mt-4">
+                            <li class="icon-facebook"><a href="https://www.facebook.com/clubtrianz/" target="_blank"
+                                    title="Facebook"><i class="icon-social-facebook"></i></a></li>
+                            <li class="icon-twitter"><a href="https://twitter.com/ClubTRIANZ" target="_blank"
+                                    title="Twitter"><i class="icon-social-twitter"></i></a></li>
+                            <li class="iconicon-instagam"><a href="https://www.instagram.com/clubtrianz" target="_blank"
+                                    title="Instagram"><i class="icon-social-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container py-2">
+                    <div class="row py-4">
+                        <div
+                            class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+                            <p>© Copyright 2020. Todos los derechos reservados.</p>
+                            <p>Desarrollado por Vianny Molero - LDigital.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="./assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/vendor/common/common.min.js"></script>
+    <script src="./assets/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+    <script src="./assets/vendor/isotope/jquery.isotope.min.js"></script>
+    <script src="./assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+    <script src="./assets/js/theme.js"></script>
+    <script src="./assets/js/custom.js"></script>
+
+    <script src="./assets/js/theme.init.js"></script>
+
+
+</body>
+
+</html>
